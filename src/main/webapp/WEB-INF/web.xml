@@ -1,0 +1,73 @@
+
+<web-app>
+	<servlet>
+		<servlet-name>AuthentificationServlet</servlet-name>
+		<servlet-class>presentation.AuthentificationServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AccueilServlet</servlet-name>
+		<servlet-class>presentation.AccueilServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>EditClientServlet</servlet-name>
+		<servlet-class>presentation.EditClientServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ComptesClientServlet</servlet-name>
+		<servlet-class>presentation.ComptesClientServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>VirementServlet</servlet-name>
+		<servlet-class>presentation.VirementServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ModifierClientServlet</servlet-name>
+		<servlet-class>presentation.ModifierClientServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ConsulterClientServlet</servlet-name>
+		<servlet-class>presentation.ConsulterClientServlet</servlet-class>
+	</servlet>
+	
+	<filter>
+		<filter-name>mon.filtre.http</filter-name>
+		<filter-class>presentation.MonFiltreHttp</filter-class>
+	</filter>
+
+	<servlet-mapping>
+		<servlet-name>AuthentificationServlet</servlet-name>
+		<url-pattern>/authentification</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AccueilServlet</servlet-name>
+		<url-pattern>/accueil</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EditClientServlet</servlet-name>
+		<url-pattern>/editclient</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ComptesClientServlet</servlet-name>
+		<url-pattern>/comptesclient</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>VirementServlet</servlet-name>
+		<url-pattern>/virement</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ModifierClientServlet</servlet-name>
+		<url-pattern>/modifier</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ConsulterClientServlet</servlet-name>
+		<url-pattern>/consulter</url-pattern>
+	</servlet-mapping>
+	
+	<filter-mapping>
+		<filter-name>mon.filtre.http</filter-name>
+		<url-pattern>/accueil</url-pattern>
+		<url-pattern>/editclient</url-pattern>
+		<url-pattern>/comptesclient</url-pattern>
+		<url-pattern>/virement</url-pattern>
+	</filter-mapping>
+</web-app>
