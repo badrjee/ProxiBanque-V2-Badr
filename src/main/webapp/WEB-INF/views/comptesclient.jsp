@@ -46,11 +46,7 @@
 
 		<h2>Application ProxyBanque</h2>
 
-		<p>
-
-			Bienvenue dans votre espace ProxyBanque
-
-		</p>
+		<p>Bienvenue dans votre espace ProxyBanque</p>
 
 		<br>
 
@@ -74,26 +70,11 @@
 
 				<table class="table">
 
-					<thead>
-
-						<tr>
-
-							<th>Numero de compte</th>
-
-							<th>Type de compte</th>
-
-							<th>Date d'ouveture</th>
-
-							<th>Solde</th>
-
-						</tr>
-
-					</thead>
 
 					<tbody>
 
-						<c:forEach var="compte" items="${client.comptes}">
-<tr>
+						<tr>
+							<th>Date d'Ouverture</th>
 
 							<th>Numero de compte</th>
 
@@ -106,7 +87,6 @@
 							<th>Solde</th>
 
 						</tr>
-
 					</thead>
 
 					<tbody>
@@ -114,6 +94,8 @@
 						<c:forEach var="compte" items="${client.comptes}">
 
 							<tr>
+
+								<th><c:out value="${compte.dateOuvertureCompte}" /></th>
 
 								<th><c:out value="${compte.numeroDeCompte}" /></th>
 
@@ -147,7 +129,6 @@
 
 
 					</tbody>
-
 				</table>
 
 			</div>
